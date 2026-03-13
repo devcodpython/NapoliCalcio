@@ -20,8 +20,8 @@ def genera_analisi_partita(partita_scelta):
         CHIAVE_API = st.secrets["GEMINI_API_KEY"]
         genai.configure(api_key=CHIAVE_API)
         
-        # 2. Connessione all'IA
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        # 2. Connessione all'IA (Usiamo la versione pro, stabilissima)
+        model = genai.GenerativeModel('gemini-pro')
         
         # 3. Il Prompt di addestramento
         prompt_addestramento = f"""
